@@ -21,8 +21,7 @@ var wysihtml5ParserRules = {
     li:     {},
     a:      {
       set_attributes: {
-        target: "_blank",
-        rel:    "nofollow"
+        target: "_blank"
       },
       check_attributes: {
         href:   "url" // important to avoid XSS

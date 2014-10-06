@@ -11,3 +11,4 @@ example/demo/media/cache/
 example/demo/server-static/
 .coverage
 .emacs.desktop*
+.idea
