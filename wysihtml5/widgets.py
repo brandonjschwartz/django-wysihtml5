@@ -159,9 +159,9 @@ class Wysihtml5TextareaWidget(AdminTextareaWidget):
 
         super(Wysihtml5TextareaWidget, self).__init__(attrs=attrs)
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         if value is None: value = ''
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs)
         textarea_widget = '<textarea%s>%s</textarea>' % (
             flatatt(final_attrs),
             conditional_escape(force_text(value)))
