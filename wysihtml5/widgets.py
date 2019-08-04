@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import six
 
 from django.contrib.admin.widgets import AdminTextareaWidget
-from django.forms.util import flatatt
+from django.forms.utils import flatatt
 try:
     from django.utils.encoding import force_text
 except ImportError:

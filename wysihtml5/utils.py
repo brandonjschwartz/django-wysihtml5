@@ -1,11 +1,15 @@
 #-*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from importlib import import_module
+
 import re
 
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.functional import allow_lazy
-from django.utils.importlib import import_module
+try:
+    from django.utils.functional import keep_lazy as allow_lazy
+except ImportError:
+    from django.utils.functional import allow_lazy
 
 
 def get_function(function_path):
