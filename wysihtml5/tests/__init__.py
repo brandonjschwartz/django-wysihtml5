@@ -17,7 +17,7 @@ def run_tests():
     from django.conf import settings
     from django.test.utils import get_runner
 
-    runner = get_runner(settings, "django.test.simple.DjangoTestSuiteRunner")
+    runner = get_runner(settings, "django.test.runner.DiscoverRunner")
     test_suite = runner(verbosity=2, interactive=True, failfast=False)
     test_suite.run_tests(["wysihtml5"])
 
